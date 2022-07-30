@@ -150,7 +150,7 @@ function operadoresLogicos(num1, num2, num3) {
   //Si no se cumplen ninguna de las condiciones anteriores, retornar false. 
   if (num1===0||num2===0||num3===0){
     return "Error";
-  } else if (num1>0 && num1>num2 && num2>num3){
+  } else if (num1>0 && num1>num2 && num1>num3){
     return "Número 1 es mayor y positivo";
   } else if (num1 <0 || num2<0 || num3<0){
     return "Hay negativos";
@@ -199,8 +199,7 @@ function tablaDelSeis(){
 function tieneTresDigitos(numero){
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
-  var x = numero;
-  x = numero.toString().lenght
+  var x = Math.ceil(Math.log(numero + 1)/Math.LN10);
   if (x===3){
     return true;
   }
