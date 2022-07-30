@@ -57,8 +57,8 @@ function saludo(idioma) {
     case "ingles":
       return "Hello!";
       break;
-    deafult:
-      return `undefined`;
+    default:
+      return "Hola";
       break;
   }
 }
@@ -84,7 +84,7 @@ function colors(color) {
       case "orange":
         return "This is orange";
         break;
-    deafult:
+    default:
       return "Color not found";
       break;
   }
@@ -105,7 +105,7 @@ function estaEnRango(numero) {
   // Devuelve "true" si "numero" es menor que 50 y mayor que 20
   // De lo contrario, devuelve "false"
   // Tu código:
-  if (numero<5 && numero>20){
+  if (numero<50 && numero>20){
     return true;
   }
   return false;
@@ -167,10 +167,10 @@ function esPrimo(numero) {
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
   if (numero ===0||numero===1||numero===4){
-    return "falso";
+    return false;
   }
   for (var x = 2;x <numero/2;x++){
-    if (numero % x === 0)return "falso";
+    if (numero % x === 0)return false;
   }
   return true;
 }
@@ -199,7 +199,9 @@ function tablaDelSeis(){
 function tieneTresDigitos(numero){
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
-  if (numero.lenght===3){
+  var x = numero;
+  x.toString().lenght
+  if (x===3){
     return true;
   }
   return false;
