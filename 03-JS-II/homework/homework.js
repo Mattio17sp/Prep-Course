@@ -58,7 +58,7 @@ function saludo(idioma) {
       return "Hello!";
       break;
     default:
-      return "Hola";
+      return "Hola!";
       break;
   }
 }
@@ -150,10 +150,10 @@ function operadoresLogicos(num1, num2, num3) {
   //Si no se cumplen ninguna de las condiciones anteriores, retornar false. 
   if (num1===0||num2===0||num3===0){
     return "Error";
+  } else if (num1>0 && num1>num2 && num2>num3){
+    return "Número 1 es mayor y positivo";
   } else if (num1 <0 || num2<0 || num3<0){
     return "Hay negativos";
-  } else if (num1>num2 && num2>num3){
-    return "Número 1 es mayor y positivo";
   } else if (num3>num1 && num3>num2){
     return ++num3;
   }
@@ -200,7 +200,7 @@ function tieneTresDigitos(numero){
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
   var x = numero;
-  x.toString().lenght
+  x = numero.toString().lenght
   if (x===3){
     return true;
   }
